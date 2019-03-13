@@ -2,9 +2,11 @@
 
 var player_One=1;
 
+// if(('.cell').hasClass('x') || ('.cell').hasClass('o')){
+//   console.log('This cell is already selected');
+// } else {
 
-
-$(".cell").one("click", function (event) {
+$(".cell").on("click", function (event) {
   if(player_One == 1) {
     $(event.target).addClass('x');
     if (checkWinner('x')){
@@ -25,6 +27,8 @@ $(".cell").one("click", function (event) {
     }
   }
 })
+
+
 
 
 

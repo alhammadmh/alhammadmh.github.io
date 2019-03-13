@@ -1,33 +1,9 @@
-/* .flex-container {
-    display: flex;
-    background-color: #f1f1f1;
-  }
-  
-  .flex-container > div {
-    background-color: DodgerBlue;
-    color: white;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-  } */
-
-
-  /* body{
-    background-image: url(background.jpg);
-  } */
-
-
-
-  .button{
+  .rest{
     display: flex;
     padding: 2%;
-  }
-
-  .button >button{
-    margin: 0 auto;
+    margin: auto;
     flex-basis: 80px;
+    justify-content: center;
   }
 
   .grid {
@@ -81,15 +57,35 @@
 }
 
 
-.start{
+/* .start{
   display: block;
   text-align: center;
   padding:15px 30px;
   margin: auto;
   background-color: beige;
   font-size: 60px;
-}
+} */
 
+.start{
+  /* display: flex;
+  color: black;
+  background-color: beige;
+  text-align: center;
+  margin: auto;
+  justify-content: center; */
+
+  display: flex;
+  padding: 2%;
+  margin: auto;
+  flex-basis: 80px;
+  justify-content: center;
+  
+}
+.start a{
+  font-size: 60px;
+  padding: 15px 30px;
+  text-decoration: none;
+}
 
 
 .background{
