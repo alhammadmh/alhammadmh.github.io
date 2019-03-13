@@ -2,15 +2,16 @@
   font-size: 60px;
   padding: 15px 30px;
   text-decoration: none;
+  color: white;
 }
 
 .start button{
-  border: none;
   border-radius: 150px;
-  background-color:black;
+  background-color:rgb(43, 0, 124);
+  border: 0.5px white solid;
 }
 .start button:hover{
-  background-color:blueviolet;
+  background-color:rgb(184, 182, 185);
 }
 
 /* ////////////////////// */
@@ -26,9 +27,9 @@
   .rest button{
     padding: 2px 20px;
     font-size: 25px;
-    border: none;
+    border: 0.5px white solid;
     border-radius: 150px;
-    background-color:black;
+    background-color:rgba(20, 1, 90, 0.8);
     color: white;
     cursor: pointer;
   }
@@ -58,7 +59,7 @@
   .cell {
     width: 160px;
     height: 160px;
-    background: grey;
+    background: rgba(58, 58, 58, 0.7);
     display: table-cell;
     font-size: 0px;
     cursor: pointer;
@@ -66,28 +67,36 @@
  
 
   .players{
-      background-color: beige;
+      background-color: rgba(50, 50, 49, 0.824);
       padding: 20px;
       display: flex;
-      align-content: stretch;
-      justify-content: center;
   }
 
   
   .players .one{
-    /* flex:1; */
-    margin: auto;
+    flex:1;
+    margin: 0 auto;
     flex-basis: 20%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
   }
 
-.x{
-  background-color: #7ea0d6;
+  .players .two{
+    flex:1;
+    margin: auto;
+    flex-basis: 20%;
+    text-align: center;
+  }
+
+.X{
+  background-color: #7ea0d6bf;
   background-image:url('x_img.png');
   background-size: 160px;
 }
 
-.o{
-  background-color: #bfb8b7;
+.O{
+  background-color: #bfb8b7b5;
   background-image: url('o_img.png');
   background-size: 160px;
 }

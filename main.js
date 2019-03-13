@@ -1,38 +1,53 @@
+// let x= 1;
+// let o= 2;
 
-// var x= 1;
-// var o= 2;
-var player_One= 1;
-// prompt('Who is Playing First?');
-// if(('.cell').hasClass('x') || ('.cell').hasClass('o')){
-//   console.log('This cell is already selected');
-// } else {
+
+  var player= prompt('Who is Playing First? X or O ?').toUpperCase();
+  console.log(player);
+
+
 
 $(".cell").one("click", function (event) {
-  if(player_One == 1) {
-    $(event.target).addClass('x');
-    if (checkWinner('x')){
+  if(player === 'X') {
+    $('.one').text(`Player O tern`);
+    $(event.target).addClass('X');
+    // if statement to check if there is X player won 
+    // if he won there will be an alert and the click function will be disabled
+    if (checkWinner('X')){
       setTimeout(function() {
-        alert ('Player '+player_One+' won')
+        $('.cell').off('click')
+        alert (`Player X won`)
       }, 250);
+      // if there is no winner it will move to the next player
     } else { 
-      player_One = 2;
+      player = 'O';
     }
   } else {  
-    $(event.target).addClass('o');
-    if (checkWinner('o')){
+    // next player will have a class of O 
+    $(event.target).addClass('O');
+    // this function to show the user who's turn it's
+    $('.one').text(`Player X tern`);
+    // if statement to check if there is player won
+    // if he won there will be an alert and the click function will be disabled 
+    if (checkWinner('O')){
       setTimeout(function() {
-        alert ('Player '+player_One+' won')
+        $('.cell').off('click')
+        alert (`Player O won`)
       }, 250)
     } else {
-      player_One = 1;
+      player = 'X';
     }
+    // else {
+    //   setTimeout(function() {
+    //     $('.cell').off('click')
+    //     alert (`There is no Winner`)
+    //   }, 250)
+    // }
   }
 })
 
 
-
-
-
+// if statement with all the winning combonation 
 function checkWinner (value){
   if ($('#0').hasClass(value) && $('#1').hasClass(value) && $('#2').hasClass(value)){
   return true;
