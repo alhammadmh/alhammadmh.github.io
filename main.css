@@ -1,3 +1,20 @@
+.start a{
+  font-size: 60px;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+.start button{
+  border: none;
+  border-radius: 150px;
+  background-color:black;
+}
+.start button:hover{
+  background-color:blueviolet;
+}
+
+/* ////////////////////// */
+
   .rest{
     display: flex;
     padding: 2%;
@@ -5,6 +22,25 @@
     flex-basis: 80px;
     justify-content: center;
   }
+
+  .rest button{
+    padding: 2px 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 150px;
+    background-color:black;
+    color: white;
+    cursor: pointer;
+  }
+
+  .rest button:hover{
+    background-color: gray;
+    color:black;
+  }
+
+
+  /* //////////////////////////// */
+
 
   .grid {
     display: table;
@@ -57,37 +93,26 @@
 }
 
 
-/* .start{
-  display: block;
-  text-align: center;
-  padding:15px 30px;
-  margin: auto;
-  background-color: beige;
-  font-size: 60px;
-} */
-
 .start{
-  /* display: flex;
-  color: black;
-  background-color: beige;
-  text-align: center;
-  margin: auto;
-  justify-content: center; */
-
   display: flex;
   padding: 2%;
   margin: auto;
   flex-basis: 80px;
   justify-content: center;
-  
 }
-.start a{
-  font-size: 60px;
-  padding: 15px 30px;
-  text-decoration: none;
-}
-
 
 .background{
   background-image: url('background.jpg')
+}
+
+.gameName{
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.gameName h1{
+  font-weight: bolder;
 }

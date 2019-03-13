@@ -1,18 +1,19 @@
 
-
-var player_One=1;
-
+// var x= 1;
+// var o= 2;
+var player_One= 1;
+// prompt('Who is Playing First?');
 // if(('.cell').hasClass('x') || ('.cell').hasClass('o')){
 //   console.log('This cell is already selected');
 // } else {
 
-$(".cell").on("click", function (event) {
+$(".cell").one("click", function (event) {
   if(player_One == 1) {
     $(event.target).addClass('x');
     if (checkWinner('x')){
       setTimeout(function() {
         alert ('Player '+player_One+' won')
-      }, 250)
+      }, 250);
     } else { 
       player_One = 2;
     }
@@ -57,14 +58,6 @@ function checkWinner (value){
 
 
 
-// Reset button function 
-$('button').on('click',function(){
-  $('.cell').css('background','grey')
-})
 
 
-// Landing page link 
 
-$('.start').on('click', function(){
-  $('.start').att('src', 'game.html')
-})
