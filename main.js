@@ -1,21 +1,54 @@
 
 
-var player_One='x';
+var player_One=1;
 
 
-// function nextPlayer(cell){
-//   cell.innerText= player_One;
-//   switchPlayer();
-//   }
+
+$(".cell").one("click", function (event) {
+  if(player_One == 1) {
+    $(event.target).addClass('x');
+    if (checkWinner('x')){
+      setTimeout(function() {
+        alert ('Player '+player_One+' won')
+      }, 250)
+    } else { 
+      player_One = 2;
+    }
+  } else {  
+    $(event.target).addClass('o');
+    if (checkWinner('o')){
+      setTimeout(function() {
+        alert ('Player '+player_One+' won')
+      }, 250)
+    } else {
+      player_One = 1;
+    }
+  }
+})
 
 
-$(".cell").on("click", function turn (event) {
 
-  if(player_One == 'x') {$(event.target).css("background-image", "url(x_img.png)").css('background-size','160px').css('background-color', '#7ea0d6');
-   player_One = 'o';
-} else {  $(event.target).css("background-image", "url(o_img.png)").css('background-size','160px').css('background-color', '#bfb8b7')
-  player_One = 'x';
-}})
+function checkWinner (value){
+  if ($('#0').hasClass(value) && $('#1').hasClass(value) && $('#2').hasClass(value)){
+  return true;
+  } else if ($('#3').hasClass(value) && $('#4').hasClass(value) && $('#5').hasClass(value)){
+    return true;
+  } else if ($('#6').hasClass(value) && $('#7').hasClass(value) && $('#8').hasClass(value)){
+    return true;
+  } else if ($('#0').hasClass(value) && $('#3').hasClass(value) && $('#6').hasClass(value)){
+    return true;
+  } else if ($('#1').hasClass(value) && $('#4').hasClass(value) && $('#7').hasClass(value)){
+    return true;
+  } else if ($('#2').hasClass(value) && $('#5').hasClass(value) && $('#8').hasClass(value)){
+    return true;
+  } else if ($('#2').hasClass(value) && $('#4').hasClass(value) && $('#6').hasClass(value)){
+    return true;
+  } else if ($('#0').hasClass(value) && $('#4').hasClass(value) && $('#8').hasClass(value)){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 
@@ -26,4 +59,8 @@ $('button').on('click',function(){
 })
 
 
-  
+// Landing page link 
+
+$('.start').on('click', function(){
+  $('.start').att('src', 'game.html')
+})

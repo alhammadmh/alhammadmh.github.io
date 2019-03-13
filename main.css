@@ -49,6 +49,7 @@
     background: grey;
     display: table-cell;
     font-size: 0px;
+    cursor: pointer;
   }
  
 
@@ -66,3 +67,31 @@
     margin: auto;
     flex-basis: 20%;
   }
+
+.x{
+  background-color: #7ea0d6;
+  background-image:url('x_img.png');
+  background-size: 160px;
+}
+
+.o{
+  background-color: #bfb8b7;
+  background-image: url('o_img.png');
+  background-size: 160px;
+}
+
+
+.start{
+  display: block;
+  text-align: center;
+  padding:15px 30px;
+  margin: auto;
+  background-color: beige;
+  font-size: 60px;
+}
+
+
+
+.background{
+  background-image: url('background.jpg')
+}
